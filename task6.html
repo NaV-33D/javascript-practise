@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let names = [" John", "Jane", "Doe", "Alice", "Bob"];
+        names.forEach(name => console.log(name));
+        names.push("Eve");
+        names = names.filter(name => name.trim() !== "Doe");
+        names.sort();
+        if (names.includes("Alice")) {
+            console.log("Alice is present");
+        } else {
+            console.log("Alice is not present");
+        }
+        let uppercaseNames = names.map(name => name.toUpperCase());
+        console.log(uppercaseNames);
+    </script>
+</body>
+
+</html>
