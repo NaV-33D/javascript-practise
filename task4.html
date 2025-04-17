@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Analyze String</title>
+</head>
+
+<body>
+    <h1>String Analyzer</h1>
+
+    <label for="inputString">Enter a string:</label><br>
+    <textarea id="inputString" rows="4" cols="50"></textarea><br><br>
+
+    <button onclick="runAnalysis()">Analyze</button>
+
+    <h2>Results:</h2>
+    <pre id="results"></pre>
+
+    <script>
+        function analyzeString(input) {
+            const lower = input.toLowerCase();
+            const upper = input.toUpperCase();
+
+            return {
+                length: input.length,
+                lowercase: lower,
+                uppercase: upper,
+                containsJavaScript: lower.includes("javascript"),
+                countOfA: (lower.match(/a/g) || []).length
+            };
+        }
+
+        function runAnalysis() {
+            const input = document.getElementById('inputString').value;
+            const result = analyzeString(input);
+            document.getElementById('results').textContent = JSON.stringify(result, null, 2);
+        }
+    </script>
+</body>
+
+</html>
