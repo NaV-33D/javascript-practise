@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conditionals and Loops</title>
+</head>
+
+<body>
+    <script>
+        // CONDITIONAL STATEMENTS
+        let number = 7;
+
+        if (number > 10) {
+            console.log("Greater than 10");
+        } else if (number === 10) {
+            console.log("Equal to 10");
+        } else {
+            console.log("Less than 10");
+        }
+
+        // SWITCH STATEMENT
+        let grade = 'B';
+
+        switch (grade) {
+            case 'A':
+                console.log("Excellent");
+                break;
+            case 'B':
+                console.log("Good");
+                break;
+            case 'C':
+                console.log("Fair");
+                break;
+            default:
+                console.log("Needs improvement");
+        }
+
+        // LOOPING STATEMENTS
+
+        // for loop
+        console.log("For Loop:");
+        for (let i = 1; i <= 3; i++) {
+            console.log("Count:", i);
+        }
+
+        // for/in loop
+        const person = { name: "Alice", age: 25 };
+        console.log("For/In Loop:");
+        for (let key in person) {
+            console.log(key + ":", person[key]);
+        }
+
+        // for/of loop
+        const colors = ["red", "green", "blue"];
+        console.log("For/Of Loop:");
+        for (let color of colors) {
+            console.log(color);
+        }
+
+        // while loop
+        console.log("While Loop:");
+        let x = 0;
+        while (x < 3) {
+            console.log("x is", x);
+            x++;
+        }
+
+        // do/while loop
+        console.log("Do/While Loop:");
+        let y = 0;
+        do {
+            console.log("y is", y);
+            y++;
+        } while (y < 3);
+    </script>
+</body>
+
+</html>

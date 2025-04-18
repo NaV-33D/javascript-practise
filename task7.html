@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Object section
+        function createPerson(name, age, gender, occupation) {
+            return { name, age, gender, occupation };
+        }
+
+        const person1 = createPerson("Alice", 30, "Female", "Engineer");
+        const person2 = createPerson("Bob", 25, "Male", "Designer");
+
+        [person1, person2].forEach(p => {
+            console.log(`${p.name}, ${p.age}, ${p.gender}, ${p.occupation}`);
+        });
+
+        // Set section
+        const arr = [1, 2, 2, 3, 4, 4, 5];
+        const uniqueSet = new Set(arr);
+        console.log("Unique Set:", [...uniqueSet]);
+
+        function union(a, b) {
+            return new Set([...a, ...b]);
+        }
+        function intersection(a, b) {
+            return new Set([...a].filter(x => b.has(x)));
+        }
+        function difference(a, b) {
+            return new Set([...a].filter(x => !b.has(x)));
+        }
+
+        const set1 = new Set([1, 2, 3]);
+        const set2 = new Set([3, 4, 5]);
+        console.log("Union:", [...union(set1, set2)]);
+        console.log("Intersection:", [...intersection(set1, set2)]);
+        console.log("Difference:", [...difference(set1, set2)]);
+
+        // Map section
+        let myMap = new Map();
+        myMap.set("name", "Charlie");
+        myMap.set("age", 40);
+        myMap.set("role", "Manager");
+
+        console.log("Map value (name):", myMap.get("name"));
+        myMap.set("age", 41);  // Update
+        myMap.delete("role");  // Delete
+
+        console.log("Final Map:");
+        myMap.forEach((value, key) => {
+            console.log(`${key}: ${value}`);
+        });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

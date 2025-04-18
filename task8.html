@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Handling Example</title>
+</head>
+
+<body>
+    <script>
+        function myFunc() {
+            // Creating Dates
+            const currentDate = new Date();
+            console.log("Current Date:", currentDate);
+
+            // Specific date and time
+            const specificDate = new Date('2024-04-15T12:00:00');
+            console.log("Specific Date:", specificDate);
+
+            // Using milliseconds since the Unix Epoch
+            const usingTS = new Date(1619743440000);
+            console.log("Date from timestamp:", usingTS);
+
+            // Access Date Components
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1; // Months are 0-indexed
+            const day = date.getDate();        // Not getDay(), which gives day of week
+            const hours = date.getHours();
+            const minutes = date.getMinutes(); // Fixed typo from getitinutes()
+            const seconds = date.getSeconds();
+
+            console.log(`Date Components: ${day}-${month}-${year} ${hours}:${minutes}:${seconds}`);
+
+            // Format date
+            const formattedDate = date.toLocaleDateString('en-US');
+            console.log("Formatted Date:", formattedDate);
+
+            // Manipulate dates (add 7 days)
+            date.setDate(date.getDate() + 7);
+            console.log("Date after 7 days:", date.toDateString());
+
+            // Compare dates
+            const date1 = new Date('2024-04-29');
+            const date2 = new Date('2024-05-05');
+
+            if (date1 < date2) {
+                console.log("Date 1 is earlier than Date 2");
+            } else {
+                console.log("Date 1 is later or equal to Date 2");
+            }
+        }
+
+        // Run the function
+        myFunc();
+        function myFunc() {
+
+            // Regex /
+
+            // 1. Literal Characters => '/hello'
+
+            // 2. Character classes -> '[aeiou]'
+
+            // 3. Quantifiers ->
+
+            // '+' => matches one or more occurences
+
+            // '*' => matches zero or more occurences
+
+            // '?' => matches zero or one occurence
+
+            // 4. Anchors =>
+
+            //'^' => matches begining of the string
+
+            // '$' => matches the end
+
+            // 5. Modifiers
+
+            // i => matches the case-sensitive
+
+            // g -> performs global match
+
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
